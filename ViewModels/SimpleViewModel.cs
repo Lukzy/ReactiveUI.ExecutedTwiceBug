@@ -7,6 +7,4 @@ public class SimpleViewModel : ReactiveObject
         "a",
         "b"
     };
-
-    public int Counter { get; set; }
 }
