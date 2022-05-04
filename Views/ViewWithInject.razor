@@ -1,0 +1,20 @@
+﻿@page "/inject"
+
+<p>View that gets the ViewModel from the Inject attribute</p>
+
+@foreach (var value in ViewModel!.Values)
+{
+    <p>@(value)</p>
+    Counter++;
+}
+
+<p>Foreach loop was executed @Counter times</p>
+<p>ViewModel.Values contains @ViewModel.Values.Count items</p>
+
+@code
+{
+    [Inject]
+    public SimpleViewModel? ViewModel { get; set; }
+
+    public int Counter { get; set; }
+}
